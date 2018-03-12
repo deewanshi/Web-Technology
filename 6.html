@@ -1,0 +1,40 @@
+<html>
+<body>
+<form name ="StudentReg" method="post" action="">
+<h1>Student Registration Form</h1>
+<fieldset>
+<p>(Please enter your details:)</p>
+<legend><h4>Details:</h4></legend>
+First Name:<input type="text" name="firstname" placeholder="first name"/>&nbsp&nbsp&nbsp
+Last Name:<input type="text" name="lastname" placeholder="last name"/><br><br>
+Father's Name:<input type="text" name="fathername" /><br><br>
+Mother's Name:<input type="text" name="mothername" /><br><br>
+DOB:<input type="date" name="dob" placeholder="DD/MM/YYYY"/><br><br>
+Gender:<input type="radio" name="sex" value="Male" checked/>Male
+<input type="radio" name="sex" value="Female"/>Female
+<input type="radio" name="sex" value="Other"/>Other<br><br>
+Course:<input type="text" name="course" required/>&nbsp&nbsp&nbsp
+Department:<input type="text" name="dept" required/>&nbsp&nbsp&nbsp
+Year:<input type="number" min="1" max="4" name="yr" required/><br><br>
+</fieldset>
+<fieldset>
+<legend><h4>Work Links:</h4></legend>
+Github:<input name="git" type="url"
+       placeholder="http://abc@git.com">
+LinkedIn:<input name="myURL" type="url"
+       placeholder="http://www.example.com">
+</fieldset>
+<fieldset>
+<legend><h4>Contact Details:</h4></legend>
+<p>(Details must be correct)</p>
+Phone:<input type="tel" name="phone" placeholder="mobile" length="10" required/><br><br>
+Alternate Phone:<input type="tel" name="altphone" lenght="10" required/><br><br>
+Email:<input type="email" name="email" placeholder="eg:abc@xyz.com" required/><br><br>
+Address:<br><textarea placeholder="address" name="Text1" cols="40" rows="5"></textarea><br><br>
+PinCode:<input type="text" name="pin" min="000000" max="999999"/><br>
+</fieldset>
+
+<br>
+<center><input type="submit"><input type="reset"></center>
+</body>
+</html>

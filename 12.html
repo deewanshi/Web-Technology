@@ -1,0 +1,30 @@
+<html>
+<head>
+<script type="text/javascript">
+<!--
+var y=window.prompt("Enter a number");
+num(y);
+function num(n)
+{
+var count=0;
+for(var i=2;i<n;i++)
+{
+ if(n%i==0)
+  {
+	count=1;
+	break;
+  }
+}
+if(count==0)
+{
+alert(n+" is prime");
+}
+else
+{
+alert(n+" is not prime");
+}
+}
+
+//-->
+</script></head>
+</html>

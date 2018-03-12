@@ -1,0 +1,35 @@
+<html>
+<h1 id="demo">Mouse Over!</h1>
+<form>
+Texts:<input type="text" onkeypress="myFunction()">
+Text:<input type="text" onkeydown="myFunction1()">
+</form>
+<script>
+
+document.getElementById("demo").onmouseover = function() {mouseOver()};
+
+document.getElementById("demo").onmouseout = function() {mouseOut()};
+
+function mouseOver() {
+
+    document.getElementById("demo").style.color = "lightblue";
+
+}
+
+function mouseOut() {
+
+    document.getElementById("demo").style.color = "#f1f1c1";
+
+}
+function myFunction() {
+
+    alert("You pressed a key inside the input field");
+}
+function myFunction1() {
+
+    alert("You pressed a key!");
+
+}
+
+</script>
+</html>

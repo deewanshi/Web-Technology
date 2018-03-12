@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>JavaScript Create and Delete Cookies</title>
+	<script type="text/javascript">
+	function getCookie(cookie_name)
+			{
+				if (document.cookie.length>0)
+				{
+					cookie_start=document.cookie.indexOf(cookie_name + "=");
+					if (cookie_start!=-1)
+					{
+						cookie_start=cookie_start + cookie_name.length+1;
+						cookie_start=document.cookie.indexOf(";",cookie_start);
+						if (cookie_start==-1) 
+							cookie_start=document.cookie.length;
+							return unescape(document.cookie.substring(cookie_start,cookie_start));
+					}
+				}
+				return "";
+			}
+	
+			function setCookie(cookie_name,cookie_value,expiredays)
+			{
+				var exdate=new Date();
+				exdate.setDate(exdate.getDate()+expiredays);
+				document.cookie=cookie_name+ "=" +escape(cookie_value)+((expiredays==null) ? "" : ";expires="+exdate.toUTCString());
+			}
+
+			function checkCookie()
+			{
+
+				mycookie=getCookie('mycookie');
+				if (mycookie!=null && mycookie!="")
+				{
+					alert('Welcome again '+mycookie+'! \n The cookies has already been created.');
+				}
+				else
+				{
+					mycookie=prompt('Please enter your name:',"");
+					if (mycookie!=null && mycookie!="")
+					{
+						setCookie('mycookie',mycookie,30);
+					}
+				}
+			}
+
+			function eraseCookie() 
+			{
+				setCookie('mycookie',"",-1);
+				alert('The cookie has been successfully erased.');
+			}
+	</script>
+</head>
+<body>
+
+<h3>JavaScript Create and Delete Cookies Example</h3>
+<p>Click on the <b>Create Cookie</b> button to create the cookie.</p>
+<input type="button" onclick="checkCookie()" value="Create Cookie">
+<p>Click on the <b>Delete Cookie</b> button to delete the cookie.</p>
+<input type="button" onclick="eraseCookie()" value="Delete Cookie">
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<html>
+
+<head>
+
+    <title>
+
+        Modifications
+
+    </title>
+
+</head>
+
+<body>
+
+<h1 align="center">Alterations</h1>
+
+<h2>Hello User. Welcome! Please click suitable buttons to see results<br><br></h2>
+
+<p id="demo" style="font-size: 20px; font-family: Times New Roman";>EMBRACE YOUR FLAWS.</p>
+
+<button onclick="isize()">SIZE INCREASES</button>
+
+<button onclick="dsize()">SIZE DECREASES</button>
+
+<button onclick="color()">COLOURED</button>
+
+<button onclick="bold()">BOLD</button>
+
+<button onclick="styled()">STYLED</button>
+
+<button onclick="italiciz()">ITALIC</button>
+
+<button onclick="reset()">RESET</button>
+
+<script>
+
+    function isize() {
+
+        document.getElementById("demo").style.fontSize="50px";
+
+        }
+
+    function dsize() {
+
+        document.getElementById("demo").style.fontSize="10px";
+
+    }    
+
+    function color() {
+
+        document.getElementById("demo").style.color="blue";
+
+
+    }
+
+    function bold() {
+
+        document.getElementById("demo").style.fontWeight="1000";
+
+    }
+
+    function styled() {
+
+        document.getElementById("demo").style.fontFamily="Comic Sans MS";
+
+    }
+
+    function italiciz() {
+
+        document.getElementById("demo").style.fontStyle="italic";
+
+    }
+
+    function reset() {
+
+        document.getElementById("demo").style.fontSize="20px";
+
+        document.getElementById("demo").style.color="black";
+
+        document.getElementById("demo").style.fontWeight="500";
+
+        document.getElementById("demo").style.fontFamily="Times New Roman";
+
+        document.getElementById("demo").style.fontStyle="normal";
+
+    
+
+    }
+
+    </script>        
+
+</body>
+
+</html>

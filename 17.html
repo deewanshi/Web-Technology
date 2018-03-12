@@ -1,0 +1,29 @@
+<html>
+<body>
+<script type="text/javascript">
+var str="Web Enabling Tools is Cool!"
+document.writeln("<p>" + str + "</p>");
+document.writeln(str.length);
+var pos=str.indexOf("Enabling")
+if (pos>=0)
+{
+document.write("found at ");
+document.write(pos + "<br>")
+} 
+else 
+{
+document.write("Enabling not found!");
+}
+document.writeln(str.match("cool"));
+var str1="WT is great!"
+document.writeln("SUBSTRINGS: ");
+document.writeln(str1.substr(1,6));
+document.writeln("<br><br>");
+document.writeln(str1.substring(2,6));
+document.writeln("Changing Cases: ");
+document.writeln(str1.toLowerCase());
+document.writeln("<br>");
+document.writeln(str1.toUpperCase());
+</script>
+</body>
+</html>

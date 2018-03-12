@@ -1,0 +1,30 @@
+<html>
+<head>
+<script type="text/javascript">
+<!--
+var y=window.prompt("Enter index");
+var z=parseInt(y);
+document.writeln("Fibonacci till " +y+ " is ");
+document.write(" ");
+document.writeln("\n 0 1");
+for(var i=1;i<y-1;i++)
+{
+document.writeln(" "+fib(i));
+}
+function fib(n)
+{
+var s,t,f;
+s=0;
+t=1;
+for(var j=1;j<=i;j++)
+{
+f=s+t;
+s=t;
+t=f;
+}
+return f;
+}
+
+//-->
+</script></head>
+</html>

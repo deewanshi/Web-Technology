@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Handling Form Events </title>
+</head>
+<body>
+<form onsubmit="alert('Form has been submitted')" onreset="alert('All fields are cleared')">
+Name:<input type="text" name="fname" id="fname" oninvalid="alert('Please enter your name')" oninput="namm()" onblur="blurr(this.id),wh(this.id)" onfocus="focc(this.id)" required><br><br>
+<input type="SUBMIT" value="Submit">
+<input type="RESET" value="clear">
+</form>
+<script>
+function namm(x)
+{
+var x=document.getElementById("fname");
+document.getElementById("fname").innerHTML="Hello"+x.value;
+}
+function blurr(x)
+{
+var x1=document.getElementById(x).value;
+document.getElementById(x).value=x1.toUpperCase;
+}
+function wh(x)
+{
+document.getElementById(x).style.background="#f1f1c1";
+}
+function focc(x)
+{
+document.getElementById(x).style.background="#FF00C1";
+}
+</script>
+</body>
+</html>
