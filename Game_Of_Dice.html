@@ -1,0 +1,121 @@
+<html>
+
+<head>
+<title>
+	Game
+</title>
+	
+<style type="text/css">
+        
+h1
+        
+{
+          
+  color:black;
+
+  text-align: center
+      
+}
+		
+h2
+        
+{
+  color: black;
+  
+  text-align: center; 
+}
+    
+</style>
+	
+</head>
+	
+<body style="background-color:#f1f1c1">
+        
+<h1>DICE GAME,Children!</h1><br>
+		
+<h2>DICE 1:</h2>
+        
+<center>
+<h3 id="d1"></h3>
+</center><br>
+		
+<h2>DICE 2:</h2>
+        
+<center>
+<h3 id="d2"></h3>
+</center><br>
+		
+<h2>SUM:</h2>
+        
+<center>
+<h3 id="sum"></h3>
+</center><br>
+		
+<h3 id="phrase"></h3>
+        
+<center><button onclick="dice()">ROLL DIE</button>
+</center>
+		
+<script>
+		
+var count=0;
+        
+var total=0;
+			
+function dice()
+			
+{
+                
+var x=Math.floor(1+Math.random()*6);
+                
+document.getElementById("d1").innerHTML=x;
+                
+var y=Math.floor(1+Math.random()*6);
+                
+document.getElementById("d2").innerHTML=y;
+                
+var sum=x+y;
+                
+document.getElementById("sum").innerHTML=x+y;
+                
+if(sum==7||sum==11)
+              
+  {
+
+   document.getElementById("phrase").innerHTML="You Win";
+   count++;      
+   }
+			
+else if(sum==2||sum==3||sum==12)
+   {
+   document.getElementById("phrase").innerHTML="You Lose";
+   count++;
+   }
+else
+ {
+  var points=sum;
+  dice();
+  if(count>1)
+  {
+   if(sum==points)
+   {
+    document.getElementById("phrase").innerHTML="You Win";
+   }
+   else if(sum==7)
+   {
+    document.getElementById("phrase").innerHTML="You Lose";
+   }
+   else
+   {
+    dice();
+   }
+  }
+ }
+
+}	
+		
+</script>
+	
+</body>
+
+</html>
